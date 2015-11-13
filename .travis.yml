@@ -9,4 +9,6 @@ install:
   - pip install nose           # Add me to install nose
 script: nosetests --with-coverage --with-doctest
 after_success:
-  - coveralls debug
+  - coveralls
+after_failure:
+  - coveralls
