@@ -3,5 +3,9 @@ python:
   - "3.4"
 install:
   - pip install requests
-
-script: python -m doctest jarvis.py
+  - pip install coveralls
+  - pip install python-coveralls
+  - pip install coverage       # Add me to install coverage.py
+  - pip install nose           # Add me to install nose
+script: nosetests --with-coverage --with-doctest
+after_success: coveralls
