@@ -46,19 +46,19 @@ def prompter():
     else:
         dispatcher(command, "")
 
-def starter():
+def starter(cliargs):
     # TODO: Finish up command line interface
-    print("DEBUG: Called with ", sys.argv[1:])
+    print("DEBUG: Called with ", cliargs[1:])
 
     print("Summoning Jarvis")
     print("Good evening!")
 
-    if (len(sys.argv) > 1):
-        command = sys.argv[2]
+    if (len(cliargs) > 1):
+        command = cliargs[2]
         # TODO: Call dispatcher with args instead of prompting user. 
     else:
         prompter()
 
 
 if __name__ == "__main__":
-    starter()
+    starter(sys.argv)
