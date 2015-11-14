@@ -9,7 +9,7 @@ def square(n):
     >>> square(2)
     4 
     >>> square(3)
-    8
+    9
     """
     return n*n
 
