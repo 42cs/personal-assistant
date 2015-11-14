@@ -63,8 +63,13 @@ def starter(cliargs):
 
 #this is a comment
 def dance():
-    """Every personal assistant should know how to dance!"""
-    print("left right chachacha left right chacha\n left left right right dip up chachacha")
+    """Every personal assistant should know how to dance!
+    >>> dance()
+    left right chachacha left right chacha
+    left left right right dip up chachacha
+
+    """
+    print("left right chachacha left right chacha\nleft left right right dip up chachacha")
     return
 
 if __name__ == "__main__":
