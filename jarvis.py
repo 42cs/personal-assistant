@@ -34,15 +34,17 @@ def dispatcher(command, arg):
 def prompter():
     """ asks for things """
 
-    command = (input("How may I help you?: [weather, square, go away, bye]")).lower()
+    command = (input("How may I help you?: [weather, square, go away, bye, dance]")).lower()
     if command == "weather":
         city = input("Sure thing! What city?")
         dispatcher(command, city)
     if command == "square":
         num = input("I love math! What number?")
         dispatcher(command, num)
-    elif command == "stocks": # TODO
+    if command == "stocks": # TODO
         pass
+    elif command == "dance":
+        dance()
     else:
         dispatcher(command, "")
 
@@ -63,8 +65,15 @@ def starter(cliargs):
 
 #this is a comment
 def dance():
-    """Every personal assistant should know how to dance!"""
-    print("left right chachacha left right chacha\n left left right right dip up chachacha")
+    """Every personal assistant should know how to dance!
+    TODO: Add more dances
+
+    >>> dance()
+    left right chachacha left right chacha
+    left left right right dip up chachacha
+
+    """
+    print("left right chachacha left right chacha\nleft left right right dip up chachacha")
     return
 
 if __name__ == "__main__":
