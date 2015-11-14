@@ -11,7 +11,7 @@ def square(n):
     >>> square(3)
     8
     """
-    return n**n
+    return n*n
 
 def dispatcher(command, arg):
     """ Does things """
