@@ -11,7 +11,7 @@ def square(n):
     >>> square(3)
     8
     """
-    return n**n
+    return n*n
 
 def dispatcher(command, arg):
     """ Does things """
@@ -34,7 +34,7 @@ def dispatcher(command, arg):
 def prompter():
     """ asks for things """
 
-    command = input("How may I help you?: [weather, square, go away, bye]")
+    command = (input("How may I help you?: [weather, square, go away, bye]")).lower()
     if command == "weather":
         city = input("Sure thing! What city?")
         dispatcher(command, city)
@@ -54,8 +54,10 @@ def starter(cliargs):
     print("Good evening!")
 
     if (len(cliargs) > 1):
-        command = cliargs[2]
+        command = cliargs[1]
+        arg = cliargs[2]
         # TODO: Call dispatcher with args instead of prompting user. 
+        dispatcher(command, arg)
     else:
         prompter()
 
