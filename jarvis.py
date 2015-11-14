@@ -61,6 +61,11 @@ def starter(cliargs):
     else:
         prompter()
 
+#this is a comment
+def dance():
+    """Every personal assistant should know how to dance!"""
+    print("left right chachacha left right chacha\n left left right right dip up chachacha")
+    return
 
 if __name__ == "__main__":
     starter(sys.argv)
